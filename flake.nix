@@ -1,5 +1,5 @@
 {
-  description = "srid/haskell-template: Nix template for Haskell projects";
+  description = "advent-of-code-2022";
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";

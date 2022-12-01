@@ -1,21 +1,10 @@
 cabal-version:      2.4
-name:               haskell-template
+name:               aoc
 version:            0.1.0.0
 license:            MIT
-copyright:          2022 Sridhar Ratnakumar
-maintainer:         srid@srid.ca
-author:             Sridhar Ratnakumar
+copyright:          2022 Brian Kuhns
+author:             Brian Kuhns
 category:           Web
-
--- TODO: Before hackage release.
--- A short (one-line) description of the package.
--- synopsis:
-
--- A longer description of the package.
--- description:
-
--- A URL where users can report bugs.
--- bug-reports:
 
 extra-source-files:
   LICENSE
@@ -72,6 +61,10 @@ common shared
     TypeFamilies
     TypeOperators
     ViewPatterns
+    FunctionalDependencies
+    AllowAmbiguousTypes
+    ExplicitForAll
+    InstanceSigs
 
   build-depends:
     , aeson
@@ -87,6 +80,8 @@ common shared
     , shower
     , time
     , with-utf8
+    , flow
+    , extra
 
   hs-source-dirs:     src
   default-language:   Haskell2010
@@ -94,3 +89,6 @@ common shared
 executable haskell-template
   import:  shared
   main-is: Main.hs
+  other-modules:
+    Problem
+    P1
