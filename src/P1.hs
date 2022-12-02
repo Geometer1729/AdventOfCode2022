@@ -1,4 +1,3 @@
-{-# OPTIONS_GHC -Wno-orphans #-}
 module P1 where
 
 import Flow
@@ -11,4 +10,5 @@ instance Problem "1-a" [[Int]] Int where
 
 instance Problem "1-b" [[Int]] Int where
   parse = parse @"1-a"
+  path = path @"1-a"
   solve = map sum .> sortOn Down .> take 3 .> sum
