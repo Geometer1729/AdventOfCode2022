@@ -92,5 +92,8 @@ executable haskell-template
   main-is: Main.hs
   other-modules:
     Problem
+    Util
     P1
     P2
+    P3
+    P4

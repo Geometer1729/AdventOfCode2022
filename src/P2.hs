@@ -53,10 +53,6 @@ getRes n m = safeToEnum $ (fromEnum m + n) `mod` 3
 
 score :: Move -> Move -> Int
 score them me = let
-  resultPoints = case (fromEnum me - fromEnum them) `mod` 3 of
-                   0 -> 3 -- Tie
-                   1 -> 6 -- win
-                   2 -> 0 -- Lose
-                   x -> error $ fromString $ "mod 3 gave: " ++ show x
+  resultPoints = (3*) $ (fromEnum me - fromEnum them +1) `mod` 3
   movePoints = fromEnum me + 1
     in resultPoints + movePoints
