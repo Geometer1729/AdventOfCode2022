@@ -83,6 +83,7 @@ common shared
     , with-utf8
     , flow
     , extra
+    , containers
 
   hs-source-dirs:     src
   default-language:   Haskell2010
@@ -97,3 +98,4 @@ executable haskell-template
     P2
     P3
     P4
+    P5

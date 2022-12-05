@@ -1,4 +1,5 @@
 module Problem where
+
 import GHC.Base (Symbol)
 import GHC.TypeLits (symbolVal, KnownSymbol)
 
@@ -14,9 +15,11 @@ class
 
 run :: forall n p s. KnownSymbol n => Problem n p s => IO ()
 run = do
-  input <- readFile ("./inputs/" ++ path @n)
+  input <- readFile ("./inputs/" ++ takeWhile (/='-') (path @n))
   puzle <- case parse @n $ fromString input of
     Nothing -> die "failed to parse"
     Just puzle -> pure puzle
   let sol = solve @n puzle
   print sol
+
+-- TODO runSample
