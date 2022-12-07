@@ -6,6 +6,7 @@ import P2()
 import P3()
 import P4()
 import P5()
+import P6()
 
 main :: IO ()
-main = run @"5-b"
+main = run @"6-b"
