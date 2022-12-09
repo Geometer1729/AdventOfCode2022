@@ -8,6 +8,8 @@ import P4()
 import P5()
 import P6()
 import P7()
+import P8()
+import P9()
 
 main :: IO ()
-main = run @"7-b"
+main = run @"9-b"
