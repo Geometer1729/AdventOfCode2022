@@ -10,6 +10,7 @@ import P6()
 import P7()
 import P8()
 import P9()
+import P10()
 
 main :: IO ()
-main = run @"9-b"
+main = run @"10-b"

@@ -66,6 +66,7 @@ common shared
     AllowAmbiguousTypes
     ExplicitForAll
     InstanceSigs
+    DefaultSignatures
 
   build-depends:
     , aeson
@@ -103,3 +104,4 @@ executable haskell-template
     P7
     P8
     P9
+    P10

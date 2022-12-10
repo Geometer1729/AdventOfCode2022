@@ -4,10 +4,14 @@ import GHC.Base (Symbol)
 import GHC.TypeLits (symbolVal, KnownSymbol)
 
 class
-  (KnownSymbol n , Show s)
+  KnownSymbol n
   => Problem (n :: Symbol) p s | n -> p , n -> s where
   path :: String
   path = symbolVal (Proxy @n)
+
+  showMeth :: s -> String
+  default showMeth :: Show s => s -> String
+  showMeth = show
 
   parse :: Text -> Maybe p
 
@@ -20,6 +24,6 @@ run = do
     Nothing -> die "failed to parse"
     Just puzle -> pure puzle
   let sol = solve @n puzle
-  print sol
+  putStrLn $ showMeth @n sol
 
 -- TODO runSample
