@@ -12,6 +12,7 @@ import P8()
 import P9()
 import P10()
 import P11()
+import P12()
 
 main :: IO ()
-main = run @"11-b"
+main = run @"12-b"
