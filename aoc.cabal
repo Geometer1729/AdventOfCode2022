@@ -67,6 +67,7 @@ common shared
     ExplicitForAll
     InstanceSigs
     DefaultSignatures
+    DeriveAnyClass
 
   build-depends:
     , aeson
@@ -111,3 +112,4 @@ executable haskell-template
     P12
     P13
     P14
+    P15
